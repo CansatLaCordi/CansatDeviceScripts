@@ -1,3 +1,4 @@
+import time
 import Adafruit_BMP.BMP085 as BMP085
 
 Tempsensor = BMP085.BMP085()
