@@ -1,6 +1,5 @@
 import time
-import Adafruit_BMP.BMP085 as BMP
-
+import Adafruit_BMP as BMP
 import os
 
 class CansatSensorController:
