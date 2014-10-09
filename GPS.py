@@ -26,6 +26,8 @@ class GpsPoller(threading.Thread):
       gpsd.next() #this will continue to loop and grab EACH set of gpsd info to clear the buffer
  
 if __name__ == '__main__':
+  print 'Inicializando socket'
+  os.system('gpsd /dev/ttyAMA0 -F /var/run/gpsd.sock')
   gpsp = GpsPoller() # create the thread
   try:
     gpsp.start() # start it up
