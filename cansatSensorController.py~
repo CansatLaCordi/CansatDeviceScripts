@@ -14,4 +14,4 @@ class CansatSensorController:
 			print 'Altitude = {0:0.2f} m'.format(_tempSensor.read_altitude())
 			print 'Sealevel Pressure = {0:0.2f} Pa'.format(_tempSensor.read_sealevel_pressure())		
 			time.sleep(_segEspera)	
-		
+

@@ -1,5 +1,7 @@
 
-import CansatSensorController 
+import CansatSensorController as csc 
 
-cont = CansatSensorController()
+
+print 'Librerias importadas'
+cont = csc.CansatSensorController()
 cont.Start()

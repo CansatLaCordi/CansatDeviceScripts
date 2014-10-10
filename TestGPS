@@ -1,0 +1,22 @@
+import gps
+2. 
+3.# Listen on port 2947 (gpsd) of localhost
+4.session = gps.gps("localhost", "2947")
+5.session.stream(gps.WATCH_ENABLE | gps.WATCH_NEWSTYLE)
+6. 
+7.while True:
+8.    try:
+9.    	report = session.next()
+10.		# Wait for a 'TPV' report and display the current time
+11.		# To see all report data, uncomment the line below
+12.		# print report
+13.        if report['class'] == 'TPV':
+14.            if hasattr(report, 'time'):
+15.                print report.time
+16.    except KeyError:
+17.		pass
+18.    except KeyboardInterrupt:
+19.		quit()
+20.    except StopIteration:
+21.		session = None
+22.		print "GPSD has terminated"
