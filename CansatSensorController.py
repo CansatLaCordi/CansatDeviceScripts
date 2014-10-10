@@ -5,7 +5,10 @@ from gps import *
 from time import *
 import time
 import threading
+<<<<<<< HEAD
 import serial
+=======
+>>>>>>> 4528a39db9185fdb47d6c0076d0aa7193422b822
 
 gpsd = None #seting the global variable
 bmp = None #inicializar bmp variable 
@@ -50,7 +53,11 @@ class Medicion:
 	Satelites = None
 	Velocidad = None
 	def ImprimirMedicion(self):
+<<<<<<< HEAD
 		print 'Temp {0:0.2f} *C'.format(self.Temperatura)
+=======
+		print 'Temp {0:0.2f} *C\n'.format(self.Temperatura)
+>>>>>>> 4528a39db9185fdb47d6c0076d0aa7193422b822
 		print 'Pres {0:0.2f} Pa'.format(self.Presion)
 		print 'Altitud {0:0.2f} m'.format(self.Altitud)
 		print 'PresionNivelMar {0:0.2f} Pa'.format(self.PresionNivelMar)
@@ -67,7 +74,10 @@ if __name__ == '__main__':
 	gpsp = GpsPoller() # create the thread
 	bmp = BMP.BMP085()
 	m = Medicion()
+<<<<<<< HEAD
 	ser = serial.Serial('/dev/ttyAMA0',9600)
+=======
+>>>>>>> 4528a39db9185fdb47d6c0076d0aa7193422b822
 	try:
 		gpsp.start() # start it up
 		while True:
